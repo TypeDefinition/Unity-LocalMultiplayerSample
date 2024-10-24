@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     public void OnLeft(InputAction.CallbackContext context) {
         // Ignore input that does not belong to this player.
-        if (PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
+        if (!PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
 
         if (context.performed)
             Debug.Log("Player Index: " + playerIndex.ToString() + ", Action: OnLeft");
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 
     public void OnRight(InputAction.CallbackContext context) {
         // Ignore input that does not belong to this player.
-        if (PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
+        if (!PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
 
         if (context.performed)
             Debug.Log("Player Index: " + playerIndex.ToString() + ", Action: OnRight");
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
     public void OnUp(InputAction.CallbackContext context) {
         // Ignore input that does not belong to this player.
-        if (PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
+        if (!PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
 
         if (context.performed)
             Debug.Log("Player Index: " + playerIndex.ToString() + ", Action: OnUp");
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 
     public void OnDown(InputAction.CallbackContext context) {
         // Ignore input that does not belong to this player.
-        if (PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
+        if (!PlayerDeviceManager.GetInstance().IsPlayerDevice(playerIndex, context.control.device.deviceId)) { return; }
         
         if (context.performed)
             Debug.Log("Player Index: " + playerIndex.ToString() + ", Action: OnDown");
